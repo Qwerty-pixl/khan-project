@@ -271,17 +271,15 @@ section {
     }
 }
 
-.big_tit {
-    font-size: 144px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #000;
-    font-family: "Inter";
-    width: 713px;
-    height: 344px;
 
-}
 
-.first {
+.blank_header {
     display: flex;
+    width: 100%;
+    height: 100%;
 }
+
+
+
+
+
