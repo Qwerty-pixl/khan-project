@@ -49,7 +49,7 @@ textarea {
     outline: none;
     display: block;
     width: 100%;
-    font-family: inherit;
+    font-family: "Inter";
     font-size: inherit;
     font-weight: inherit;
 }
@@ -113,34 +113,6 @@ section {
 
 .hover {
     transition: 0.3s;
-}
-
-.hover:hover {
-    color: #BE963F;
-}
-
-.btn {
-    background: linear-gradient(93.7deg, #F3C87A -1.69%, #F3EECA 37.58%, #B39556 77.08%, #EED489 109.84%);
-    box-shadow: 0px 4px 0px #836A36;
-    border-radius: 10px;
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #34280E;
-    height: 85px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 14px 0;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    box-shadow: 0px 6px 5px 2px #836A36;
 }
 
 .link {
@@ -286,7 +258,6 @@ section {
     height: 344px;
     top: 22px;
     left: 276px;
-
 }
 
 .min_txt {
@@ -297,7 +268,7 @@ section {
 }
 
 .description {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .description p {
@@ -314,4 +285,203 @@ section {
 
 .description a:hover {
     text-decoration: underline;
+}
+
+.blank_help {
+    background-image: url(../img/icons/Frame\ 72.jpg);
+    height: 368px;
+    width: 888px;
+    background-repeat: no-repeat;
+    padding: 15px;
+}
+
+.help_kons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.help_circle {
+    background: #A3ACB8;
+    width: 11px;
+    height: 11px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.blank_main {
+    margin-top: 20px;
+}
+
+.help_kons {
+    display: flex;
+    align-items: center;
+}
+
+.kons_txt {
+    color: #A3ACB8;
+    font-family: "Inter";
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18.2px;
+    text-align: left;
+
+}
+
+.help_circle {
+    width: 15px;
+    height: 15px;
+    background-color: grey;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.helpik {
+    display: flex;
+    align-items: center;
+    margin: 80px 0;
+}
+
+.help_tit {
+    font-family: "Inter";
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: #A3ACB8;
+    padding: 0 20px;
+}
+
+.help_desc {
+    font-family: "Inter";
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: #EEF0F1;
+}
+
+.help_btns {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.help_btns .btn {
+    width: 200px;
+    height: 56px;
+    padding: 16px 20px 16px 20px;
+    gap: 8px;
+    border-radius: 32px;
+    background: var(--Surface-Link, #FF6900);
+    display: flex;
+    justify-content: space-between;
+}
+
+.social_btns {
+    display: flex;
+    margin-left: 15px;
+}
+
+.social_btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 32px;
+}
+
+.social_btn i {
+    color: white;
+}
+
+.whatsapp {
+    background: var(--Surface-Primary, #EEF0F1);
+
+}
+
+.telegram {
+    background: var(--Surface-Primary, #EEF0F1);
+
+}
+
+.team {
+    margin-top: 50px;
+    width: 888px;
+}
+
+
+
+.team_members {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.team_member {
+    text-align: center;
+}
+
+.team_member img :first-child{
+    width: 358px;
+    height: 358px;
+    border-radius: 50%;
+}
+
+.team_member .name {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.team_member .role {
+    color: grey;
+    margin-top: 5px;
+}
+
+.btn_txt {
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: var(--Text-Inverted-Primary, #EEF0F1);
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.team_tit {
+    font-family: "Inter";
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: -0.03em;
+    text-align: left;
+
+}
+
+.team_txt {
+
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+
 }
