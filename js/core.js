@@ -1,5 +1,5 @@
 document.querySelectorAll('.menu-trigger, .hamburger').forEach(el => {
-    el.addEventListener('click', function() {
+    el.addEventListener('click', function () {
         const menu = document.querySelector('.popup-menu');
         menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
     });
@@ -11,7 +11,7 @@ document.querySelectorAll('.menu-trigger, .hamburger').forEach(el => {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Инициализация Swiper здесь
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 3, // Количество видимых слайдов
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-    
+
 });
 
 
@@ -62,3 +62,23 @@ document.querySelectorAll('.accordion-header').forEach(button => {
 
 
 
+// Add this to your JavaScript file
+
+const burger = document.querySelector('.burger');
+const menu = document.querySelector('.menu');
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    menu.classList.toggle('active');
+});
+
+
+
+function show_popap(id_popap) {
+    var id = "#" + id_popap;
+    $(id).addClass('active');
+}
+
+$(".close_popap").click(function () {
+    $(".overlay").removeClass("active");
+});
