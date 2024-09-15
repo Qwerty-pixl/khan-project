@@ -1,32 +1,60 @@
-// For menu-trigger click (larger screens)
-document.querySelector('.menu-trigger').addEventListener('click', function() {
-    const menu = document.querySelector('.popup-menu');
-    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-});
-
-// For hamburger click (smaller screens)
-document.querySelector('.hamburger').addEventListener('click', function() {
-    const menu = document.querySelector('.popup-menu');
-    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+document.querySelectorAll('.menu-trigger, .hamburger').forEach(el => {
+    el.addEventListener('click', function() {
+        const menu = document.querySelector('.popup-menu');
+        menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    });
 });
 
 
 
 
 
-var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3, // Количество видимых слайдов
-    spaceBetween: 30, // Расстояние между слайдами
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    breakpoints: {
-        768: {
-            slidesPerView: 2, // Количество слайдов на экранах до 768px
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Инициализация Swiper здесь
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3, // Количество видимых слайдов
+        spaceBetween: 30, // Расстояние между слайдами
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
         },
-        480: {
-            slidesPerView: 1, // Количество слайдов на мобильных экранах
+        breakpoints: {
+            768: {
+                slidesPerView: 2, // Количество слайдов на экранах до 768px
+            },
+            480: {
+                slidesPerView: 1, // Количество слайдов на мобильных экранах
+            }
         }
-    }
+    });
+    
+});
+
+
+
+
+document.querySelectorAll('.accordion-header').forEach(button => {
+    button.addEventListener('click', () => {
+        const accordionItem = button.parentElement;
+        const accordionContent = button.nextElementSibling;
+
+        // Закрыть все другие открытые элементы
+        document.querySelectorAll('.accordion-item').forEach(item => {
+            if (item !== accordionItem) {
+                item.classList.remove('active');
+                item.querySelector('.accordion-content').style.maxHeight = null;
+            }
+        });
+
+        // Переключение активного элемента
+        accordionItem.classList.toggle('active');
+
+        if (accordionItem.classList.contains('active')) {
+            accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+        } else {
+            accordionContent.style.maxHeight = null;
+        }
+    });
 });
